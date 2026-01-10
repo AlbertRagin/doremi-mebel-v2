@@ -1,0 +1,115 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #2d2d2d;
+  --color-accent: #c9a177;
+  --color-accent-hover: #b88f65;
+  --color-light: #f9f7f3;
+  --border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 48px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.btn {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+}
+
+.btn-outline:hover {
+  background: var(--color-text);
+  color: white;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* Очень узкие экраны: iPhone SE, старые Android */
+@media (max-width: 375px) {
+  header .container {
+    padding: 0 12px;
+  }
+
+  header .btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    min-width: auto;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  /* Логотип чуть меньше */
+  header div:first-child {
+    font-size: 1.25rem;
+  }
+}
